@@ -1,8 +1,5 @@
-var CurrentColor = "",
+var currentColor = "",
 	changeColor = "",
-	red = "rgba(199,16,56,1.00)",
-	green = "rgba(23,201,104,1.00)",
-	blue = "rgba(26,136,215,1.00)",
 	divWidth = $('.box').width(); 
 
 $(document).ready(function(){
@@ -10,13 +7,13 @@ $(document).ready(function(){
 });
 
 $(".changer").click(function () {
-	CurrentColor = $(this).val();
-	if (CurrentColor === "red"){
-		changeColor = red;
-	}else if (CurrentColor === "green"){
-		changeColor = green;
+	currentColor = $(this).val();
+	if (currentColor === "red"){
+		changeColor = "rgba(199,16,56,1.00)";
+	}else if (currentColor === "green"){
+		changeColor = "rgba(23,201,104,1.00)";
 	}else {
-		changeColor = blue;
+		changeColor = "rgba(26,136,215,1.00)";
 	}
 	document.documentElement.style.setProperty('--color', changeColor);
     $(".changer").parent().addClass("newColor"); 
